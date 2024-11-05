@@ -43,14 +43,14 @@ body {
 }
 
 #numbers {
-    font-weight: lighter;
+  font-weight: lighter;
 }
 
 .btn-container {
   /* width: 800px; */
   display: grid;
-  grid-template-columns: 20% 20% 20% 20%;
-  grid-template-rows: 20% 20% 20% 20%;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(5, auto);
   justify-content: center;
   gap: 10%;
   column-gap: 2%;
@@ -113,4 +113,141 @@ button.btn {
   border: 1px solid rgba(158, 251, 157, 0.904);
   border-radius: 8px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 400px) {
+  .calc-container {
+    width: 300px;
+    height: 365px;
+  }
+
+  .display {
+    font-size: 1.5rem;
+    padding: 5%;
+  }
+
+  .btn-container {
+    gap: 10%;
+  }
+
+  button.btn {
+    border-radius: 16%;
+    font-size: 20px;
+    height: 32px;
+  }
+
+  .color {
+    border-radius: 16%;
+    font-size: 20px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .calc-container {
+    width: 520px;
+    height: 800px;
+  }
+
+  .display {
+    font-size: 3rem;
+    padding: 8%;
+  }
+
+  #numbers {
+    padding: 2%;
+    letter-spacing: 10px;
+    font-size: 4.5rem;
+  }
+
+  #result {
+    padding: 3%;
+  }
+
+  .btn-container {
+    gap: 10%;
+  }
+
+  button.btn {
+    border-radius: 16%;
+    font-size: 40px;
+    height: 62px;
+  }
+
+  .color {
+    border-radius: 16%;
+    font-size: 3rem;
+    height: 4rem;
+  }
+
+  button#winter.color {
+    border: 3px solid;
+  }
+
+  button#fall.color {
+    border: 3px solid;
+  }
+
+  button#spring.color {
+    border: 3px solid;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .calc-container {
+    width: 900px;
+    height: 1300px;
+    
+  }
+
+  .display {
+    font-size: 4rem;
+    padding: 8%;
+  }
+
+  #numbers {
+    padding: 2%;
+    letter-spacing: 10px;
+    font-size: 4.5rem;
+  }
+
+  #result {
+    margin: auto;
+    padding: 3%;
+    width: 700px;
+  }
+
+  .btn-container {
+    column-gap: 6%;
+    row-gap: 3%;
+    
+  }
+
+  button.btn {
+    border-radius: 16%;
+    font-size: 40px;
+    height: 150px;
+    width: 170px;
+  }
+
+  .color {
+    border-radius: 16%;
+    font-size: 3rem;
+    height: 4rem;
+  }
+
+  button#winter.color {
+    border: 3px solid;
+  }
+
+  button#fall.color {
+    border: 3px solid;
+  }
+
+  button#spring.color {
+    border: 3px solid;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
 }
