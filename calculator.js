@@ -1,39 +1,28 @@
-const themeChanger = document.querySelectorAll(
-  ".main-container, calc-container, .btn"
-);
-// themeChanger.forEach((element) => element.classList.add("themeSpring"));
+//create function to change themes for calculator and bg on user's click
 
+let btnThemes = document.querySelector(".themes");
 let btnWinter = document.querySelector("#winter");
 let btnFall = document.querySelector("#fall");
 let btnSpring = document.querySelector("#spring");
+let btnButtons = document.querySelectorAll(".btn");
 
-btnWinter.addEventListener("click", winter);
-btnFall.addEventListener("click", fall);
-btnSpring.addEventListener("click", spring);
+/*
+btnThemes.addEventListener("click", function () {
+  console.log("it works");
+});
+*/
 
-function winter() {
-  themeChanger.forEach((element) =>
-    element.classList.remove("themeFall", "themeSpring")
-  );
-  themeChanger.forEach((element) => element.classList.add("themeWinter"));
-  document.querySelector("body").style.backgroundImage =
-    "url(/images/winter.jpg";
-}
-function fall() {
-  themeChanger.forEach((element) =>
-    element.classList.remove("themeWinter", "themeSpring")
-  );
-  themeChanger.forEach((element) => element.classList.add("themeFall"));
-  document.querySelector("body").style.backgroundImage = "url(/images/fall.jpg";
-}
+btnWinter.addEventListener("click", function () {
+  console.log("winter");
+  this.style.backgroundColor = "blue";
+  //   document.querySelectorAll(".btn").style.color = "green";
+  btnButtons.classList.add("green-box");
+});
 
-function spring() {
-  themeChanger.forEach((element) =>
-    element.classList.remove("themeFall", "themeWinter")
-  );
-  themeChanger.forEach((element) => element.classList.add("themeSpring"));
-  document.querySelector("body").style.backgroundImage =
-    "url(/images/spring.jpg";
-}
+btnFall.addEventListener("click", function () {
+  console.log("fall");
+});
 
-console.log(themeChanger);
+btnSpring.addEventListener("click", function () {
+  console.log("spring");
+});
