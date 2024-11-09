@@ -11,9 +11,8 @@ body {
 
 .main-container {
   /* width: 800px; */
-  background-color: rgba(82, 119, 211, 0.288);
+  /* background-color: rgba(82, 119, 211, 0.288); */
   backdrop-filter: blur(1px);
-  padding: 20px;
   display: grid;
   justify-content: center;
   margin: auto;
@@ -140,9 +139,9 @@ button.btn {
     height: 32px;
   }
 
-.themes{
+  .themes {
     width: 20rem;
-}
+  }
   .color {
     border-radius: 16%;
     font-size: 20px;
@@ -183,9 +182,9 @@ button.btn {
     height: 70px;
   }
 
-.themes{
+  .themes {
     width: 30rem;
-}
+  }
 
   .color {
     border-radius: 16%;
@@ -244,9 +243,9 @@ button.btn {
     width: 100px;
   }
 
-.themes{
+  .themes {
     padding-top: 3rem;
-}
+  }
 
   .color {
     border-radius: 16%;
@@ -268,3 +267,32 @@ button.btn {
   }
 }
 
+.themeWinter {
+  .btn {
+    background-color: rgba(149, 204, 240, 0.777);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.582);
+  }
+  .calc-container {
+    background-color: rgba(136, 139, 223, 0.357);
+    border: 1px solid rgba(255, 255, 255, 0.582);
+  }
+}
+.themeFall {
+  .btn {
+    background-color: orange;
+    color: black;
+  }
+  .calc-container {
+    background-color: blue;
+  }
+}
+.themeSpring {
+  .btn {
+    background-color: green;
+    color: black;
+  }
+  .calc-container {
+    background-color: yellow;
+  }
+}
