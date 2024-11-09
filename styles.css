@@ -12,6 +12,8 @@ body {
   font-optical-sizing: auto;
   font-weight: bolder;
   font-style: normal;
+  width: 100vw;
+  height: 100vh;
 }
 
 .main-container {
@@ -217,7 +219,7 @@ button.btn {
   .themes {
     width: 20rem;
   }
-  
+
   .color {
     border-radius: 16%;
     font-size: 20px;
