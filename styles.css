@@ -11,9 +11,8 @@ body {
 
 .main-container {
   /* width: 800px; */
-  background-color: rgba(82, 119, 211, 0.288);
+  /* background-color: rgba(82, 119, 211, 0.288); */
   backdrop-filter: blur(1px);
-  padding: 20px;
   display: grid;
   justify-content: center;
   margin: auto;
@@ -141,7 +140,9 @@ button.btn {
   }
 
   .themes {
-    width: 20rem;
+    .themes {
+      width: 20rem;
+    }
   }
   .color {
     border-radius: 16%;
@@ -184,7 +185,9 @@ button.btn {
   }
 
   .themes {
-    width: 30rem;
+    .themes {
+      width: 30rem;
+    }
   }
 
   .color {
@@ -245,7 +248,9 @@ button.btn {
   }
 
   .themes {
-    padding-top: 3rem;
+    .themes {
+      padding-top: 3rem;
+    }
   }
 
   .color {
