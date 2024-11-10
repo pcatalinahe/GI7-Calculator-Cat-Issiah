@@ -1,3 +1,14 @@
-1 2 3 4 5 6 7 8 9 0 00 = + - % * / . reset del
+# Project Title
 
-comments, fix read me, host site
+Calculator
+
+## Description
+
+This is made using HTML, CSS, and JavaScript. Calculator that can process user input with addition, subtraction, multiplication, division, and percentage. It includes 3 themes.
+
+### Website Deployment
+
+gi-7-calculator-cat-issiah.vercel.app
+
+### Demo
+
