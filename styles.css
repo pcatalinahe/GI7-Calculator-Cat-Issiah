@@ -23,14 +23,13 @@ body {
 }
 
 .main-container {
-  /* width: 800px; */
   display: grid;
   justify-content: center;
   margin: auto;
 }
 
 .calc-container {
-  background-color: rgba(255, 255, 255, 0.509);
+  background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
   padding: 20px;
   margin-top: 50%;
@@ -43,7 +42,6 @@ body {
   text-align: center;
   display: grid;
   justify-content: center;
-  /* padding: 10px; */
   font-weight: bold;
 }
 
@@ -66,7 +64,6 @@ body {
 }
 
 .btn-container {
-  /* width: 800px; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, auto);
@@ -74,7 +71,6 @@ body {
   gap: 10%;
   column-gap: 2%;
   padding: 8%;
-  /* height: 60%; */
 }
 
 button.btn {
@@ -95,7 +91,6 @@ button.btn:hover {
 }
 
 .themes {
-  /* width: 800px; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -162,20 +157,18 @@ footer a:link {
   color: white;
 }
 
-
 footer a:visited {
   text-decoration: none;
   color: white;
 }
 
-/* nested theme classes */
+/* Nested Classes For Theme Changing in JavaScript*/
 
 .theme-winter {
   .background {
     backdrop-filter: blur(1.5px);
     background-color: rgba(82, 119, 211, 0.3);
   }
-
   .btn {
     background-color: rgba(149, 204, 240, 0.5);
     color: white;
@@ -198,7 +191,6 @@ footer a:visited {
     background-color: #5792a398;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.165),
       0 6px 20px 0 rgba(0, 0, 0, 0.195);
-    /* #1c1a1c; */
   }
 
   .calc-container {
@@ -233,7 +225,7 @@ footer a:visited {
   }
 }
 
-/* responsiveness */
+/* Media Queries for Responsiveness  */
 
 @media only screen and (min-width: 400px) {
   .calc-container {
@@ -282,18 +274,14 @@ footer a:visited {
 
   .display {
     font-size: 3rem;
-    /* padding: 8%; */
   }
 
   #numbers {
-    /* padding: 2%; */
-    /* letter-spacing: 10px; */
     font-size: 3rem;
     min-height: 115px;
   }
 
   #result {
-    /* padding: 3%; */
     margin-right: 2rem;
     margin-left: 2rem;
   }
@@ -332,7 +320,6 @@ footer a:visited {
 }
 
 @media only screen and (min-width: 1680px) {
-  /*1680 by 1050*/
   .calc-container {
     width: 600px;
     height: 700px;
@@ -341,7 +328,6 @@ footer a:visited {
 
   .display {
     font-size: 2.5rem;
-    /* padding: 8%; */
   }
 
   .calc-container > h4 {
@@ -349,18 +335,13 @@ footer a:visited {
   }
 
   #numbers {
-    /* padding: 2%; */
-    /* letter-spacing: 10px; */
     font-size: 3rem;
     min-height: 115px;
   }
 
   #result {
-    /* padding: 3%; */
     margin-right: 30px;
     margin-left: 30px;
-    /* width: 700px; */
-
   }
 
   .btn-container {

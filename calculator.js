@@ -1,11 +1,14 @@
+// Calculator Aesthetic Code Starts Here
+// This selects our html elements which we then change the class of for dynamic style changing with css
 let themesChanged = document.querySelectorAll(
   ".background, .calc-container, .btn, #results, .display"
 );
-
+// Declaring our buttons that will do the theme changes
 let btnWinter = document.querySelector("#winter");
 let btnFall = document.querySelector("#fall");
 let btnSpring = document.querySelector("#spring");
 
+// Theme changes on button clicks, removes prior themes if applied, then changes background color and image for further theme stying
 btnWinter.addEventListener("click", function () {
   themesChanged.forEach((element) =>
     element.classList.remove("theme-fall", "theme-spring")
@@ -36,10 +39,13 @@ btnSpring.addEventListener("click", function () {
   document.querySelector(".background").style.backgroundColor = "#e73b632b";
 });
 
+// Calculator Functional Code Starts Here
+// An object we use later on to push numbers into and join
 const btnValues = {
   dataValues: [],
 };
 
+// Declaration of our variables and buttons
 let varNumber1 = null;
 let varNumber2 = null;
 let operator = null;
@@ -65,6 +71,7 @@ let btnSum = document.querySelector("#sum");
 let btnDecimal = document.querySelector("#decimal");
 let resultDisplay = document.querySelector("#numbers");
 
+// Adding event listeners for our buttons we just declared, pushing corresponding value into our array, combining them together in real time and updating the display to show current value
 btnZero.addEventListener("click", function () {
   btnValues.dataValues.push(0);
   resultDisplay.innerText = `${btnValues.dataValues.join("")}`;
@@ -112,6 +119,7 @@ btnDoubleZero.addEventListener("click", function () {
   resultDisplay.innerText = `${btnValues.dataValues.join("")}`;
 });
 
+// On click of operator buttons it will set our first variables to current data, then clear the object which contained the data values, and then it sets the operator to its respective choice
 btnSum.addEventListener("click", function () {
   varNumber1 = btnValues.dataValues.join("");
   btnValues.dataValues = [];
@@ -151,6 +159,7 @@ btnClear.addEventListener("click", function () {
   btnValues.operator = [];
 });
 
+// On backspace button click it will use pop method to remove last data input and then update the display
 btnBackspace.addEventListener("click", function () {
   btnValues.dataValues.pop();
   resultDisplay.innerText = btnValues.dataValues.join("");
@@ -163,6 +172,7 @@ btnDecimal.addEventListener("click", function () {
   resultDisplay.innerText = btnValues.dataValues.join("");
 });
 
+// Main function that does the calculations on equal sign button click, checks for empty data value for variable one, if else statements for checking operator values for which one to use, template literates to show full equation, both inputs and operator and result.
 let btnEqual = document.querySelector("#equal");
 btnEqual.addEventListener("click", function () {
   if (varNumber1 != null) {
