@@ -38,7 +38,7 @@ body {
   text-align: center;
   display: grid;
   justify-content: center;
-  padding: 10px;
+  /* padding: 10px; */
   font-weight: bold;
 }
 
@@ -52,6 +52,7 @@ body {
   border-radius: 2%;
   margin-right: 2rem;
   margin-left: 2rem;
+  text-align: center;
 }
 
 #numbers {
@@ -206,6 +207,10 @@ button.btn {
     padding: 5%;
   }
 
+  #numbers {
+    min-height: 35px;
+  }
+
   .btn-container {
     gap: 10%;
   }
@@ -235,17 +240,18 @@ button.btn {
 
   .display {
     font-size: 3rem;
-    padding: 8%;
+    /* padding: 8%; */
   }
 
   #numbers {
-    padding: 2%;
+    /* padding: 2%; */
     letter-spacing: 10px;
     font-size: 3rem;
+    min-height: 70px;
   }
 
   #result {
-    padding: 3%;
+    /* padding: 3%; */
     margin-right: 2rem;
     margin-left: 2rem;
   }
@@ -287,7 +293,7 @@ button.btn {
   /*1680 by 1050*/
   .calc-container {
     width: 600px;
-    height: 700px;
+    height: 750px;
   }
 
   .display {
@@ -296,14 +302,14 @@ button.btn {
   }
 
   #numbers {
-    padding: 2%;
+    /* padding: 2%; */
     letter-spacing: 10px;
     font-size: 3rem;
+    height: 1px;
   }
 
   #result {
-    margin: auto;
-    padding: 3%;
+    /* padding: 3%; */
     margin-right: 30px;
     margin-left: 30px;
     /* width: 700px; */
