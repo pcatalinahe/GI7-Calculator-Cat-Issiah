@@ -1,17 +1,6 @@
-//create function to change themes for calculator and bg on user's click
-
-// let themesChanged = document.querySelectorAll(
-//   ".main-container",
-//   ".calc-container",
-//   ".btn",
-//   "#results",
-//   ".display"
-// );
-
 let themesChanged = document.querySelectorAll(
   ".background, .calc-container, .btn, #results, .display"
 );
-
 
 let btnWinter = document.querySelector("#winter");
 let btnFall = document.querySelector("#fall");
@@ -48,37 +37,13 @@ btnSpring.addEventListener("click", function () {
 });
 
 const btnValues = {
-  // numbers: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "00"],
   dataValues: [],
-  // btnNumbers: [document.querySelector("#one"), document.querySelector("#two")],
 };
-
-/*
-console.log(btnValues.numbers[2]);
-console.log(btnValues.btnNumbers[0] + btnValues.btnNumbers[1]);
-console.log(btnValues.numbers[1] + btnValues.numbers[2]);
-
-console.log(typeof btnValues.numbers[0]);
-let x;
-function strConversion(stringNumber) {
-  parseInt.stringNumber;
-  console.log(stringNumber);
-}
-strConversion("10");
-
-function intConversion() {
-  x = toString(btnValues.numbers[2]);
-  console.log(typeof x);
-}
-intConversion();
-
-*/
 
 let varNumber1 = null;
 let varNumber2 = null;
 let operator = null;
 let result = null;
-
 let btnOne = document.querySelector("#one");
 let btnTwo = document.querySelector("#two");
 let btnThree = document.querySelector("#three");
@@ -98,15 +63,7 @@ let btnQuotient = document.querySelector("#quotient");
 let btnSubtract = document.querySelector("#subtract");
 let btnSum = document.querySelector("#sum");
 let btnDecimal = document.querySelector("#decimal");
-
 let resultDisplay = document.querySelector("#numbers");
-
-/*
-btnOne.addEventListener("click", function () {
-  varNumber1 + "1";
-  console.log(varNumber1);
-});
-*/
 
 btnZero.addEventListener("click", function () {
   btnValues.dataValues.push(0);
@@ -154,7 +111,6 @@ btnDoubleZero.addEventListener("click", function () {
   btnValues.dataValues.push("00");
   resultDisplay.innerText = `${btnValues.dataValues.join("")}`;
 });
-
 
 btnSum.addEventListener("click", function () {
   varNumber1 = btnValues.dataValues.join("");
@@ -212,36 +168,26 @@ btnEqual.addEventListener("click", function () {
   if (varNumber1 != null) {
     varNumber2 = btnValues.dataValues.join("");
   }
-
   if (operator == "quotient") {
     if (varNumber2 == 0) {
-      resultDisplay.innerText = 'cannot divide by 0';
+      resultDisplay.innerText = "cannot divide by 0";
     } else {
-    result = varNumber1 / varNumber2;
-    resultDisplay.innerText = `${varNumber1} ${"/"} ${varNumber2} = ${result};`
+      result = varNumber1 / varNumber2;
+      resultDisplay.innerText = `${varNumber1} ${"/"} ${varNumber2} = ${result};`;
     }
   } else if (operator == "addition") {
-    resultDisplay.innerText = parseFloat(varNumber1) + parseFloat(varNumber2);
+    result = parseFloat(varNumber1) + parseFloat(varNumber2);
+    resultDisplay.innerText = `${varNumber1} ${"+"} ${varNumber2} = ${result};`;
   } else if (operator == "product") {
-    resultDisplay.innerText = varNumber1 * varNumber2;
+    result = varNumber1 * varNumber2;
+    resultDisplay.innerText = `${varNumber1} ${"*"} ${varNumber2} = ${result};`;
   } else if (operator == "subtraction") {
-    resultDisplay.innerText = varNumber1 - varNumber2;
+    result = varNumber1 - varNumber2;
+    resultDisplay.innerText = `${varNumber1} ${"-"} ${varNumber2} = ${result};`;
   } else if (operator == "percentage") {
-    resultDisplay.innerText = (varNumber1 / varNumber2) * 100;
+    result = (varNumber1 / varNumber2) * 100;
+    resultDisplay.innerText = `${varNumber1} ${"%"} ${varNumber2} = ${result};`;
+  } else {
+    console.log("Error! Please try again.");
   }
-
-  /*
-  switch (operations) {
-    case (btnValues.operator[0] = "+"):
-      resultDisplay.innerText = varNumber1 + varNumber2;
-    case (btnValues.operator[0] = "-"):
-      resultDisplay.innerText = varNumber1 - varNumber2;
-  }
-
-  resultDisplay.innerText = eval(varNumber1 * varNumber2);
-  resultDisplay.innerText = `${varNumber1} + ${varNumber2} = ${
-    varNumber1 + varNumber2
-  }`;
-
-  */
 });
